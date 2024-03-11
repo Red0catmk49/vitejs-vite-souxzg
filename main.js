@@ -49,8 +49,8 @@
 /**
  * テンプレート文字列　``
  */
-const name = 'あかにゃこ';
-const age = 23;
+// const name = 'あかにゃこ';
+// const age = 23;
 
 // //「私の名前はあかにゃこです。年齢は23歳です。」
 
@@ -59,5 +59,29 @@ const age = 23;
 // console.log(message1);
 
 // テンプレート文字列を用いた方法
-const message2 = `私の名前は${name}です。年齢は${age}です。`;
-console.log(message2);
+// const message2 = `私の名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
+
+/**
+ * アロー関数
+ */
+// 従来の関数
+function func1(str) {
+    return str;
+}
+// const func1 = function (str) {
+//     return str;
+// };
+console.log(func1("func1です"));
+
+// //アロー関数
+const func2 = (str) => {
+    return str;
+};
+console.log(func2("func2です"));
+
+const func3 = (num1, num2) => ({
+    hoge: num1,
+    huga: num2,
+});
+console.log(func3(10, 20));
