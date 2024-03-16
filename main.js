@@ -101,10 +101,82 @@
 // const message2 = `名前は${name}です。年齢は${age}歳でぇす。`;
 // console.log(message2);
 
-const myProfile = ["あかにゃこ", 23];
-// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
-// console.log(message3);
+// const myProfile = ["あかにゃこ", 23];
+// // const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// // console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `私の名前は${name}です。年齢は${age}です。`
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `私の名前は${name}です。年齢は${age}です。`
+// console.log(message4);
+
+/**
+ * デフォルト値(引数, 分割代入)
+ */
+// const sayHello = (name = `ゲスト`) => console.log(`こんにちは!${name}さん`);
+// sayHello("あかにゃこ");
+
+// const myProfile = {
+//     age: 5
+// };
+// const {age, name = "ゲスト"} = myProfile;
+// console.log(age);
+// console.log(name);
+
+/**
+ * オブジェクトの省略記法
+ * 変数とプロパティの名前が同じ時, 省略できる
+ */
+// const name = "あかにゃこ";
+// const age = 23;
+
+// const myProfile = { name, age};
+// console.log(myProfile);
+
+/**
+ * スプレッド構文 ...
+ * 順番に中身が展開されていく
+ */
+
+// 配列の展開
+// [1, 2] -> 1, 2
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+// > 1, 2
+
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// // sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1);
+
+// まとめる
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// // > 1
+// console.log(num2);
+// // > 2
+// console.log(arr3);
+// // > (3) [3, 4, 5]
+
+// 配列のコピー, 結合
+// コピー
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// const arr6 = [...arr4];
+// arr6[0] = 100;
+// console.log(arr6);
+// // > (2) [100, 20]
+// console.log(arr4);
+// // > (2) [10, 20]
+
+// 結合
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+// > (4) [10, 20, 30, 40]
+
+const arr8 = arr4;
+arr8[0] = 100;
+console.log(arr4);
+// > (2) [100, 20]
+// スプレッド構文を使わないと、参照先自体をコピーするから要注意!!
