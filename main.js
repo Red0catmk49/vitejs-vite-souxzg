@@ -217,12 +217,35 @@ const nameArr = ["田中", "山田", "あかにゃこ"];
 // > 2番目は山田です
 // > 3番目はあかにゃこです
 
-const newNameArr = nameArr.map((name) => {
-    if (name === "あかにゃこ") {
-        return name;
-    } else {
-        return `${name}さん`;
-    }
-})
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//     if (name === "あかにゃこ") {
+//         return name;
+//     } else {
+//         return `${name}さん`;
+//     }
+// })
+// console.log(newNameArr);
 // > (3) [`田中さん`, `山田さん`, `あかにゃこ`]
+
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 > 2 ? "trueです" : "falseです";
+// console.log(val1);
+
+const num = 1300;
+// console.log(num.toLocaleString());
+// > 1,300
+// toLocaleString() > 数値に三桁ずつコンマをつけること
+
+const formattedNum = 
+    typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+console.log(formattedNum);
+// > 1,300
+
+const checkSum = (num1, num2) => {
+    return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+}
+console.log(checkSum(40, 50));
+// > 許容範囲内です
