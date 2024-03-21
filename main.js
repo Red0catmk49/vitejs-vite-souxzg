@@ -234,18 +234,18 @@ const nameArr = ["田中", "山田", "あかにゃこ"];
 // const val1 = 1 > 2 ? "trueです" : "falseです";
 // console.log(val1);
 
-const num = 1300;
-// console.log(num.toLocaleString());
-// > 1,300
-// toLocaleString() > 数値に三桁ずつコンマをつけること
+// const num = 1300;
+// // console.log(num.toLocaleString());
+// // > 1,300
+// // toLocaleString() > 数値に三桁ずつコンマをつけること
 
-const formattedNum = 
-    typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
-console.log(formattedNum);
-// > 1,300
+// const formattedNum = 
+//     typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+// // > 1,300
 
-const checkSum = (num1, num2) => {
-    return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
-}
-console.log(checkSum(40, 50));
-// > 許容範囲内です
+// const checkSum = (num1, num2) => {
+//     return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+// }
+// console.log(checkSum(40, 50));
+// // > 許容範囲内です
